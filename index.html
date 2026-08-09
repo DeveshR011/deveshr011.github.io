@@ -125,8 +125,8 @@
         <p class="project-desc">A hybrid retrieval pipeline combining SPLADE, BGE embeddings, and cross-encoder reranking, validated against published baselines before trusting the results.</p>
         <ul class="project-bullets">
           <li>Reproduced published bge-base-en-v1.5 scores on all four datasets as an independent check before trusting the hybrid result.</li>
-          <li>Measured each stage by ablation: fusion added +1.9 nDCG@10 over dense alone, reranking added +1.6 more.</li>
-          <li>Found the reranker overwriting first-stage ranking costs 5.3 nDCG@10 on claim-style queries — blending at weight 0.3 instead gains +1.6.</li>
+          <li>Measured each stage by ablation: fusion added <span class="delta-pos">+1.9</span> nDCG@10 over dense alone, reranking added <span class="delta-pos">+1.6</span> more.</li>
+          <li>Found the reranker overwriting first-stage ranking costs <span class="delta-neg">−5.3</span> nDCG@10 on claim-style queries — blending at weight 0.3 instead gains <span class="delta-pos">+1.6</span>.</li>
         </ul>
         <p class="project-tags">Python · SPLADE · BGE · Cross-Encoder</p>
         <a class="project-link" href="https://github.com/deveshr011" target="_blank" rel="noopener">View on GitHub ↗</a>
@@ -146,7 +146,7 @@
       </article>
 
       <article class="project">
-        <p class="project-metric">Peak KV-cache memory cut from 4.50 GiB to 0.36 GiB at 32K tokens</p>
+        <p class="project-metric">Peak KV-cache memory cut from <span class="metric-was">4.50 GiB</span> to 0.36 GiB at 32K tokens</p>
         <h3 class="project-name">Long-Context KV-Cache Compression on Consumer GPUs</h3>
         <p class="project-desc">Compressed the KV cache during prefill to fit long-context inference on a 6GB GPU, diagnosing a silent accuracy collapse along the way.</p>
         <ul class="project-bullets">
