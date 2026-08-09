@@ -289,10 +289,15 @@ button:focus-visible {
 .project {
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
+  padding-left: 1rem;
+  margin-left: -1rem;
   border-top: 1px solid var(--rule);
+  border-left: 2px solid transparent;
+  transition: border-left-color 0.2s ease;
 }
 .project:first-child { border-top: none; padding-top: 0; }
 .project:last-child { padding-bottom: 0; }
+.project:hover { border-left-color: var(--signal); }
 .project-metric {
   font-family: var(--font-mono);
   font-size: 0.95rem;
@@ -446,4 +451,57 @@ button:focus-visible {
 
   .role-head { flex-direction: column; }
   .contact-label { width: 4.5rem; font-size: 0.75rem; }
+}
+
+/* ---- Print ---- */
+@page {
+  margin: 1.5cm;
+}
+@media print {
+  body {
+    font-size: 11pt;
+    color: #000;
+  }
+  .site-header,
+  .nav-toggle,
+  .skip-link {
+    display: none;
+  }
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+  .link-row a::after,
+  .project-link::after {
+    content: " (" attr(href) ")";
+    font-size: 0.75em;
+    color: #333;
+  }
+  .hero {
+    padding-top: 0;
+  }
+  .hero-photo img {
+    max-width: 130px;
+    border-color: #000;
+  }
+  .eyebrow,
+  .metric,
+  .project-metric {
+    color: #000;
+  }
+  .section {
+    border-top-color: #999;
+  }
+  .role,
+  .project {
+    break-inside: avoid;
+  }
+  .project {
+    border-left: none;
+    padding-left: 0;
+    margin-left: 0;
+  }
+  .site-footer {
+    border-top-color: #999;
+  }
 }
