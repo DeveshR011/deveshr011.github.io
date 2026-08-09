@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://deveshr011.github.io/sitemap.xml

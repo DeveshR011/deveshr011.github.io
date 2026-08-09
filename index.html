@@ -5,8 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Devesh Rawat — CS Student, Retrieval &amp; ML Systems</title>
 <meta name="description" content="Devesh Rawat builds retrieval, verification, and detection systems, and the benchmarks that prove they work. Research at CSIR-HQ and DRDO SAG.">
+<meta name="theme-color" content="#fafaf8">
 <link rel="canonical" href="https://deveshr011.github.io/">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<link rel="preload" href="assets/fonts/ibm-plex-mono-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/ibm-plex-sans-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/style.css">
 
 <meta property="og:type" content="website">
@@ -20,6 +25,31 @@
 <meta name="twitter:title" content="Devesh Rawat — CS Student, Retrieval & ML Systems">
 <meta name="twitter:description" content="Devesh Rawat builds retrieval, verification, and detection systems, and the benchmarks that prove they work. Research at CSIR-HQ and DRDO SAG.">
 <meta name="twitter:image" content="https://deveshr011.github.io/assets/profile.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Devesh Rawat",
+  "url": "https://deveshr011.github.io/",
+  "image": "https://deveshr011.github.io/assets/profile.jpg",
+  "jobTitle": "Computer Science Student",
+  "email": "mailto:deveshrawat@proton.me",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "BK Birla Institute of Engineering and Technology"
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "BK Birla Institute of Engineering and Technology"
+  },
+  "sameAs": [
+    "https://github.com/deveshr011",
+    "https://www.linkedin.com/in/devesh-rawat-1324a92b0/",
+    "https://x.com/D3v3SH11"
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -138,8 +168,8 @@
         <p class="project-desc">An anchor-free object detector trained in 10 GPU-hours on a single 6GB laptop GPU. Found and fixed three silent-correctness bugs the loss curve never showed.</p>
         <ul class="project-bullets">
           <li>CNN backbone, P5-only attention, BiFPN neck, DFL-based decoupled head — the locality-first pattern behind RT-DETR and YOLOv11.</li>
-          <li>Caught a broadcasting fault that inflated box loss N&times; and a bf16 rounding error breaching a distribution's valid index range, each pinned by a regression test.</li>
-          <li>Moved AES-256-GCM encryption and HMAC-SHA256 audit logging to the checkpoint/API boundary after an in-forward-pass version was found to cost accuracy — now zero mAP cost.</li>
+          <li>Caught a broadcasting fault that inflated box loss <strong class="metric">N&times;</strong> and a bf16 rounding error breaching a distribution's valid index range, each pinned by a regression test.</li>
+          <li>Moved AES-256-GCM encryption and HMAC-SHA256 audit logging to the checkpoint/API boundary after an in-forward-pass version was found to cost accuracy — now <span class="delta-pos">zero</span> mAP cost.</li>
         </ul>
         <p class="project-tags">PyTorch · timm · BiFPN · CUDA</p>
         <a class="project-link" href="https://github.com/deveshr011" target="_blank" rel="noopener">View on GitHub ↗</a>
@@ -150,9 +180,9 @@
         <h3 class="project-name">Long-Context KV-Cache Compression on Consumer GPUs</h3>
         <p class="project-desc">Compressed the KV cache during prefill to fit long-context inference on a 6GB GPU, diagnosing a silent accuracy collapse along the way.</p>
         <ul class="project-bullets">
-          <li>Found SnapKV retains just 5% of the KV cache while matching full-context accuracy on RULER, across 2,169 runs.</li>
-          <li>Diagnosed a silent failure in query-aware eviction — windows blind to the question collapsed accuracy from 1.00 to 0.00 by chunk 4 — fixed by probing the cache with the prompt's tail first.</li>
-          <li>Traced a 128&times; memory blowup to a silent kernel fallback, validating a predictive VRAM model against measurement (3.84 vs. 3.86 GiB) to catch it pre-OOM.</li>
+          <li>Found SnapKV retains just <strong class="metric">5%</strong> of the KV cache while matching full-context accuracy on RULER, across <strong class="metric">2,169</strong> runs.</li>
+          <li>Diagnosed a silent failure in query-aware eviction — windows blind to the question collapsed accuracy from <span class="metric-was">1.00</span> to <span class="delta-neg">0.00</span> by chunk 4 — fixed by probing the cache with the prompt's tail first.</li>
+          <li>Traced a <strong class="metric">128&times;</strong> memory blowup to a silent kernel fallback, validating a predictive VRAM model against measurement (<strong class="metric">3.84</strong> vs. <strong class="metric">3.86</strong> GiB) to catch it pre-OOM.</li>
         </ul>
         <p class="project-tags">PyTorch · Transformers · Qwen3-4B · NF4</p>
         <a class="project-link" href="https://github.com/deveshr011" target="_blank" rel="noopener">View on GitHub ↗</a>

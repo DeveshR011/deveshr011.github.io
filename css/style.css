@@ -203,6 +203,8 @@ button:focus-visible {
 .delta-neg { color: var(--delta-neg); }
 
 .metric-was {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
   color: var(--muted);
   font-weight: 400;
   text-decoration: line-through;
