@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Devesh Rawat — CS Student, Retrieval &amp; ML Systems</title>
+<meta name="description" content="Devesh Rawat builds retrieval, verification, and detection systems, and the benchmarks that prove they work. Research at CSIR-HQ and DRDO SAG.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="wordmark" href="#top">devesh<span class="wordmark-dot">.</span>rawat</a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Menu</span>
+    </button>
+    <nav class="site-nav" id="siteNav">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="top">
+    <div class="wrap hero-inner">
+      <div class="hero-text">
+        <p class="eyebrow">New Delhi, India</p>
+        <h1 class="hero-name">Devesh Rawat</h1>
+        <p class="hero-tagline">I build retrieval, verification, and detection systems — and the benchmarks that prove they work.</p>
+        <p class="hero-meta">B.Tech Computer Science, Data Science specialization — BKBIET, class of 2027</p>
+        <ul class="link-row">
+          <li><a href="mailto:deveshrawat@proton.me">Email</a></li>
+          <li><a href="https://github.com/deveshr011" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/devesh-rawat-1324a92b0/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://x.com/D3v3SH11" target="_blank" rel="noopener">X</a></li>
+        </ul>
+      </div>
+      <div class="hero-photo">
+        <img src="assets/profile.jpg" alt="Portrait of Devesh Rawat" width="800" height="1200">
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="wrap">
+      <p class="eyebrow">// about</p>
+      <h2>About</h2>
+      <p class="about-text">
+        I'm a 4th-year Computer Science student specializing in Data Science, currently
+        interested in retrieval, evidence verification, and applied deep learning. At
+        CSIR-HQ I built a system that converts unstructured documents into searchable
+        records and checks claims against retrieved evidence — matching a published
+        SPLADE++ baseline on BEIR SciFact and reaching <strong class="metric">98.2%</strong>
+        of the leading SciVer reference. Before that, at DRDO SAG, I trained CNNs to
+        classify encrypted image data. Most of my projects start with a working baseline,
+        then go looking for where it silently breaks.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="experience">
+    <div class="wrap">
+      <p class="eyebrow">// experience</p>
+      <h2>Experience</h2>
+
+      <article class="role">
+        <div class="role-head">
+          <span class="role-org">Council of Scientific &amp; Industrial Research (CSIR-HQ)</span>
+          <span class="role-dates">May 2026 – Jul 2026</span>
+        </div>
+        <p class="role-title">Summer Intern · New Delhi, India</p>
+        <ul class="role-bullets">
+          <li>Built a system converting unstructured research documents into searchable, verifiable records.</li>
+          <li>Scored <strong class="metric">0.711</strong> nDCG@10 on the official BEIR SciFact benchmark — matching the published SPLADE++ baseline (<strong class="metric">0.710</strong>).</li>
+          <li>Reached <strong class="metric">98.2%</strong> of the leading SciVer reference on claim verification, with <strong class="metric">0.832</strong> macro-F1 and <strong class="metric">83.7%</strong> accuracy across 300 official claims.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <div class="role-head">
+          <span class="role-org">Scientific Analysis Group (SAG), DRDO</span>
+          <span class="role-dates">Jun 2025 – Aug 2025</span>
+        </div>
+        <p class="role-title">Research Intern · Delhi, India</p>
+        <ul class="role-bullets">
+          <li>Trained 3 CNN architectures to classify AES-CBC–encrypted CIFAR-10 images, reaching <strong class="metric">85%</strong> validation accuracy.</li>
+          <li>Built a CustomTkinter GUI to demonstrate the classification pipeline on encrypted data.</li>
+          <li>Collaborated with senior scientists on preliminary findings for defense-technology research.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="wrap">
+      <p class="eyebrow">// projects</p>
+      <h2>Projects</h2>
+
+      <article class="project">
+        <p class="project-metric">0.61 avg nDCG@10 across four BEIR datasets — 30% above BM25</p>
+        <h3 class="project-name">Bone-Engine — Hybrid Retrieval &amp; Reranking</h3>
+        <p class="project-desc">A hybrid retrieval pipeline combining SPLADE, BGE embeddings, and cross-encoder reranking, validated against published baselines before trusting the results.</p>
+        <ul class="project-bullets">
+          <li>Reproduced published bge-base-en-v1.5 scores on all four datasets as an independent check before trusting the hybrid result.</li>
+          <li>Measured each stage by ablation: fusion added +1.9 nDCG@10 over dense alone, reranking added +1.6 more.</li>
+          <li>Found the reranker overwriting first-stage ranking costs 5.3 nDCG@10 on claim-style queries — blending at weight 0.3 instead gains +1.6.</li>
+        </ul>
+        <p class="project-tags">Python · SPLADE · BGE · Cross-Encoder</p>
+        <a class="project-link" href="https://github.com/deveshr011" target="_blank" rel="noopener">View on GitHub ↗</a>
+      </article>
+
+      <article class="project">
+        <p class="project-metric">82.6 mAP@0.5 on PASCAL VOC2007 — ahead of SSD512 and YOLOv3</p>
+        <h3 class="project-name">Neural-Video-Detection-Engine — Anchor-Free Object Detection</h3>
+        <p class="project-desc">An anchor-free object detector trained in 10 GPU-hours on a single 6GB laptop GPU. Found and fixed three silent-correctness bugs the loss curve never showed.</p>
+        <ul class="project-bullets">
+          <li>CNN backbone, P5-only attention, BiFPN neck, DFL-based decoupled head — the locality-first pattern behind RT-DETR and YOLOv11.</li>
+          <li>Caught a broadcasting fault that inflated box loss N&times; and a bf16 rounding error breaching a distribution's valid index range, each pinned by a regression test.</li>
+          <li>Moved AES-256-GCM encryption and HMAC-SHA256 audit logging to the checkpoint/API boundary after an in-forward-pass version was found to cost accuracy — now zero mAP cost.</li>
+        </ul>
+        <p class="project-tags">PyTorch · timm · BiFPN · CUDA</p>
+        <a class="project-link" href="https://github.com/deveshr011" target="_blank" rel="noopener">View on GitHub ↗</a>
+      </article>
+
+      <article class="project">
+        <p class="project-metric">Peak KV-cache memory cut from 4.50 GiB to 0.36 GiB at 32K tokens</p>
+        <h3 class="project-name">Long-Context KV-Cache Compression on Consumer GPUs</h3>
+        <p class="project-desc">Compressed the KV cache during prefill to fit long-context inference on a 6GB GPU, diagnosing a silent accuracy collapse along the way.</p>
+        <ul class="project-bullets">
+          <li>Found SnapKV retains just 5% of the KV cache while matching full-context accuracy on RULER, across 2,169 runs.</li>
+          <li>Diagnosed a silent failure in query-aware eviction — windows blind to the question collapsed accuracy from 1.00 to 0.00 by chunk 4 — fixed by probing the cache with the prompt's tail first.</li>
+          <li>Traced a 128&times; memory blowup to a silent kernel fallback, validating a predictive VRAM model against measurement (3.84 vs. 3.86 GiB) to catch it pre-OOM.</li>
+        </ul>
+        <p class="project-tags">PyTorch · Transformers · Qwen3-4B · NF4</p>
+        <a class="project-link" href="https://github.com/deveshr011" target="_blank" rel="noopener">View on GitHub ↗</a>
+      </article>
+
+      <p class="projects-more">More projects on <a href="https://github.com/deveshr011" target="_blank" rel="noopener">github.com/deveshr011 ↗</a></p>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <div class="wrap">
+      <p class="eyebrow">// skills</p>
+      <h2>Skills</h2>
+      <dl class="skills-list">
+        <div class="skills-group">
+          <dt>Programming &amp; Data</dt>
+          <dd>Python · C++ (CUDA) · C · SQL · YAML · Pandas · NumPy · scikit-learn</dd>
+        </div>
+        <div class="skills-group">
+          <dt>AI, ML &amp; Retrieval</dt>
+          <dd>PyTorch · Hugging Face · Transformers · RAG / SPLADE · BM25 · Cross-Encoders · FAISS</dd>
+        </div>
+        <div class="skills-group">
+          <dt>Learning &amp; Evaluation</dt>
+          <dd>PPO · DPO · LoRA / QLoRA · CNNs (CSPNet, BiFPN) · BEIR · nDCG@K · MRR</dd>
+        </div>
+        <div class="skills-group">
+          <dt>Engineering &amp; Security</dt>
+          <dd>Linux · Docker · Kubernetes · Git · CMake · LaTeX · AES-GCM · HMAC-SHA256</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="wrap">
+      <p class="eyebrow">// contact</p>
+      <h2>Get in touch</h2>
+      <p class="contact-line">Reach out if you want to talk research, retrieval systems, or anything built here.</p>
+      <ul class="contact-list">
+        <li><span class="contact-label">Email</span><a href="mailto:deveshrawat@proton.me">deveshrawat@proton.me</a></li>
+        <li><span class="contact-label">GitHub</span><a href="https://github.com/deveshr011" target="_blank" rel="noopener">github.com/deveshr011</a></li>
+        <li><span class="contact-label">LinkedIn</span><a href="https://www.linkedin.com/in/devesh-rawat-1324a92b0/" target="_blank" rel="noopener">linkedin.com/in/devesh-rawat</a></li>
+        <li><span class="contact-label">X</span><a href="https://x.com/D3v3SH11" target="_blank" rel="noopener">x.com/D3v3SH11</a></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>&copy; 2026 Devesh Rawat</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
